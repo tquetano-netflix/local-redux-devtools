@@ -1,0 +1,63 @@
+{
+  "name": "local-redux-devtools",
+  "version": "0.0.1",
+  "description": "Standalone Local Redux DevTools",
+  "entry": "./index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es",
+  "types": "./index.d.ts",
+  "repository": "git@github.com:sebinsua/local-redux-devtools.git",
+  "author": "Seb Insua <me@sebinsua.com>",
+  "license": "MIT",
+  "keywords": [
+    "redux",
+    "devtools",
+    "flux",
+    "react",
+    "hot reloading",
+    "time travel",
+    "live edit",
+    "local",
+    "safe"
+  ],
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "bin": {
+    "redux-server": "./bin/redux-server.js",
+    "redux-devtools": "./bin/redux-devtools.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "commitmsg": "validate-commit-msg",
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "redux": ">= 3"
+  },
+  "dependencies": {
+    "@types/remote-redux-devtools": "^0.5.0",
+    "open": "^0.0.5",
+    "remote-redux-devtools": "0.5.0",
+    "remotedev-server": "^0.2.3"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babelrc-rollup": "^3.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "prettier": "^1.5.3",
+    "redux": "^3.7.2",
+    "rollup": "^0.45.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "validate-commit-msg": "^2.12.2"
+  }
+}
