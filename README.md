@@ -1,4 +1,4 @@
-# `local-redux-devtools`
+# `local-redux-devtools` [![npm version](https://badge.fury.io/js/local-redux-devtools.svg)](https://badge.fury.io/js/local-redux-devtools)
 > Standalone Local Redux DevTools
 
 This is a composition of `remote-redux-devtools` and `remotedev-server`. They have been setup to provide a simple standalone local Redux DevTools experience.
