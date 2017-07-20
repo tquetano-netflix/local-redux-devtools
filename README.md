@@ -3,7 +3,7 @@
 
 This is a composition of `remote-redux-devtools` and `remotedev-server`. They have been setup to provide a simple standalone local Redux DevTools experience.
 
-*NOTE: Use of the `unpkg` `remotedev-app` currently causes this error message: `Uncaught Error: addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's render method, or you have multiple copies of React loaded.` because of how `ReactTransitionGroup` loads a separate copy of React.*
+*NOTE: Use of `unpkg.com`'s `remotedev-app` breaks the Settings modal's cancel button with the following error: `Uncaught Error: addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's render method, or you have multiple copies of React loaded`. This is due to [`ReactTransitionGroup`'s usage of `react-with-addons` loading a separate copy of `react`](https://github.com/facebook/react/issues/7874#issuecomment-251607410).*
 
 ### Installation
 
