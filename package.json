@@ -36,7 +36,8 @@
   },
   "scripts": {
     "commitmsg": "validate-commit-msg",
-    "build": "rollup -c"
+    "build": "npm run -s build:lib",
+    "build:lib": "rollup -c ./rollup.config.js"
   },
   "peerDependencies": {
     "redux": ">= 3"
@@ -45,7 +46,6 @@
     "@types/remote-redux-devtools": "^0.5.0",
     "cross-spawn": "^5.1.0",
     "electron": "^1.6.11",
-    "open": "^0.0.5",
     "remote-redux-devtools": "0.5.0",
     "remotedev-server": "^0.2.3"
   },
