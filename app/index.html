@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redux Developer Tools</title>
+    <meta charset="utf-8">
+    <style>
+      html {
+        min-width: 350px;
+        min-height: 300px;
+      }
+      body {
+        position: fixed;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #root {
+        height: 100%;
+      }
+      #root > div {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="http://unpkg.com/react@15/dist/react-with-addons.min.js"></script>
+    <script src="http://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="http://unpkg.com/remotedev-app/dist/remotedev-app.min.js"></script>
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      window.remotedevOptions = {
+        hostname: urlParams.get('hostname') || 'localhost',
+        port: urlParams.get('port') || 8000,
+        autoReconnect: true
+      };
+
+      ReactDOM.render(
+        React.createElement(RemoteDevApp, {
+          socketOptions: window.remotedevOptions
+        }),
+        document.querySelector('#root')
+      );
+    </script>
+  </body>
+</html>

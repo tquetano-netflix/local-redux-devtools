@@ -4,7 +4,7 @@ const open = require('open');
 
 const { hostname, port } = require('../config');
 
-const args = process.argv;
+const args = process.argv.slice(2);
 
 const shouldOpen = args.indexOf('--open') || args.indexOf('-o');
 
