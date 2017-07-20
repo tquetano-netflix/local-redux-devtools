@@ -1,6 +1,6 @@
 {
   "name": "local-redux-devtools",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Standalone Local Redux DevTools",
   "entry": "./index.js",
   "main": "./dist/index.js",
