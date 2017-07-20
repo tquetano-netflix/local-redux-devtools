@@ -1,7 +1,9 @@
-const LOCALHOST = 'localhost';
-const PORT = 8000;
+const hostname = 'localhost';
+const port = 8000;
+const securePort = 8001;
 
-module.exports = {
-  hostname: LOCALHOST,
-  port: PORT
+export {
+  hostname,
+  port,
+  securePort
 };

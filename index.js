@@ -1,18 +1,20 @@
 import { composeWithDevTools as originalComposeWithDevTools } from 'remote-redux-devtools';
 
-const { hostname, port } = require('./config');
+import * as config from './config';
+
+const { hostname, port, securePort } = config;
 
 function composeWithDevTools ({
   name,
-  ...config
+  ...options
 }) {
   return originalComposeWithDevTools({
     name,
     hostname,
-    port,
-    ...config
+    port: options.secure ? securePort : port,
+    ...options
   });
 }
 
-export { composeWithDevTools };
+export { composeWithDevTools, config };
 export default composeWithDevTools;

@@ -2,11 +2,18 @@
 const electron = require('electron');
 const spawn = require('cross-spawn');
 
-const { hostname, port } = require('../config');
+const { hostname, port, securePort } = require('../dist').config;
+
+const args = process.argv.slice(2);
+
+const shouldSecure = args.indexOf('--secure') !== -1 || args.indexOf('-s') !== -1;
 
 const result = spawn.sync(
   electron,
-  [ require.resolve('../app') ].concat([ `--hostname ${hostname}`, `--port ${port}` ]),
+  [ require.resolve('../app') ].concat([
+    `--hostname ${hostname}`,
+    `--port ${shouldSecure ? securePort : port}`
+  ]),
   { stdio: 'ignore' }
 );
 
