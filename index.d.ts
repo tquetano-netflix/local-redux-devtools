@@ -1,4 +1,9 @@
-import { RemoteReduxDevToolsOptions, composeWithDevTools } from 'remote-redux-devtools';
+import {
+  RemoteReduxDevToolsOptions,
+  composeWithDevTools
+} from 'remote-redux-devtools';
 
-export RemoteReduxDevToolsOptions;
-export composeWithDevTools;
+export {
+  RemoteReduxDevToolsOptions,
+  composeWithDevTools
+};
